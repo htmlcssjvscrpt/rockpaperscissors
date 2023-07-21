@@ -21,11 +21,12 @@ function playRound (playerSelection) {
     } else if ((compSelection === 'rock' && playerSelection === 'paper') || 
                (compSelection === 'scissors' && playerSelection === 'rock') ||
                (compSelection === 'paper' && playerSelection === 'scissors')) {
-        winner('You', compSelection, playerSelection);
         player_score += 1;
+        winner('You', compSelection, playerSelection);
+        
     } else {
-        winner('Computer', compSelection, playerSelection);
         comp_score += 1;
+        winner('Computer', playerSelection, compSelection);
     }
 }
 
